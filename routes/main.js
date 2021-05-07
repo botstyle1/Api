@@ -16,5 +16,11 @@ router.get('/api/game', (req, res) => {
 router.get('/about', (req, res) => {
     res.sendFile(__path + '/views/about.html')
 })
+router.get('/login', (req, res) => {
+    res.sendFile(__path + '/views/login.html')
+})
+router.get('/register', (req, res) => {
+    res.sendFile(__path + '/views/register.html')
+})
 
 module.exports = router
