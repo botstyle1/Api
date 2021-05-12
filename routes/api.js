@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')  
 }
  
-var creator = "Yuda Xwer"
+var creator = "BYYSAYANG"
 var secure = require('ssl-express-www');
 var cors = require('cors');
 var fetch = require('node-fetch');
@@ -175,7 +175,7 @@ Akhir Pesan Error
 
 router.use(favicon(__path + "/views/favicon.ico"));
 
-const listkey = ["YudaXwer", "manogay"];
+const listkey = ["benniismael", "beniganteng"];
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
@@ -1383,6 +1383,79 @@ res.json(loghandler.invalidKey)
 }
 })
 
+router.get('/artinama', async (req, res, next) => {
+        var Apikey = req.query.apikey,
+            nama = req.query.nama
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+    if (!nama) return res.json({ status : false, message : "masukan parameter url"})
+
+       fetch(encodeURI(`https://videfikri.com/api/primbon/artinama/?nama=${nama}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                author: 'BYYSAYANG',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/artimimpi', async (req, res, next) => {
+        var Apikey = req.query.apikey,
+            nama = req.query.nama
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+    if (!mimpi) return res.json({ status : false, message : "masukan parameter url"})
+
+       fetch(encodeURI(`https://videfikri.com/api/primbon/artimimpi/?mimpi=${mimpi}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+               author: 'BYYSAYANG',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/simsimi', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            text = req.query.text
+
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+        if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+       fetch(encodeURI(`https://rest-api.ytryo.my.id/api/sim-simi?text=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                author: 'BYYSAYANG',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 
 router.get('/music/liriklagu', async (req, res, next) => {
         var Apikey = req.query.apikey,
@@ -1905,6 +1978,8 @@ router.get("/photooxy/glitch", async(req, res, next) => {
     }
 });
 
+
+
 router.get("/photooxy/double-heart", async(req, res, next) => {
   const text1 = req.query.text;
   const apikey = req.query.apikey;
@@ -2295,7 +2370,7 @@ router.get('/textpro/3d-gradient', async(req, res, next) => {
   }
 });
 
-router.get('/maker/porn-hub', async (req, res, next) => {
+router.get('/textpro/pornhub', async (req, res, next) => {
      const apikey = req.query.apikey;
 
   const text = req.query.text1;
