@@ -2375,7 +2375,7 @@ router.get('/textpro/3d-gradient', async(req, res, next) => {
   }
 });
 
-router.get("/photooxy/xmas", async(req, res, next) => {
+router.get("/textpro/xmas", async(req, res, next) => {
   const text1 = req.query.text;
   const apikey = req.query.apikey;
   if(!text1) return res.json(loghandler.nottext1)
@@ -2399,7 +2399,7 @@ router.get("/photooxy/xmas", async(req, res, next) => {
     }
 });
 
-router.get("/photooxy/pornhub", async(req, res, next) => {
+router.get("/textpro/pornhub", async(req, res, next) => {
   const text1 = req.query.text1;
   const text2 = req.query.text2;
   const apikey = req.query.apikey;
