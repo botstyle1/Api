@@ -23,7 +23,8 @@ var emoji = new EmojiAPI();
 var router  = express.Router();
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js');
-var options = require(__path + '/lib/options.js');
+var { options } = require(__path + '/lib/options.js');
+bar textpro = require('/lib/textpro.js');
 var {
 	Searchnabi,
 	Gempa
