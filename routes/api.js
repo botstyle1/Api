@@ -1733,6 +1733,96 @@ res.json(loghandler.invalidKey)
 })
 
 
+router.get('/nsfw/ahegao', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/alpin1234567/Js-Project/master/jsinnsfw/ahegao.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+
+router.get('/nsfw/ass', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/alpin1234567/Js-Project/master/jsinnsfw/ass.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+
+router.get('/nsfw/bdsm', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/alpin1234567/Js-Project/master/jsinnsfw/bdsm.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/nsfw/blowjob', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/alpin1234567/Js-Project/master/jsinnsfw/blowjob.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
 router.get('/kuis/caklontong', async (req, res, next) => {
         var Apikey = req.query.apikey
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
