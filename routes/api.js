@@ -1419,7 +1419,7 @@ router.get('/artimimpi', async (req, res, next) => {
             
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
 	if(listkey.includes(Apikey)){
-    if (!mimpi) return res.json({ status : false, message : "masukan parameter url"})
+    if (!mimpi) return res.json({ status : false, message : "masukan parameter mimpi"})
 
        fetch(encodeURI(`https://videfikri.com/api/primbon/artimimpi/?mimpi=${mimpi}`))
         .then(response => response.json())
@@ -2477,7 +2477,7 @@ router.get("/textpro/xmas", async(req, res, next) => {
         status: true,
         code: 200,
         creator: `${creator}`,
-        result: url
+        result: data.url
       }
       res.json(result)
     })
@@ -2503,7 +2503,7 @@ router.get("/textpro/pornhub", async(req, res, next) => {
         status: true,
         code: 200,
         creator: `${creator}`,
-        result: url
+        result: data.url
       }
       res.json(result)
     })
