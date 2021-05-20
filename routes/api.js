@@ -2196,7 +2196,7 @@ router.get('/textpro/logo-wolf', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2224,7 +2224,7 @@ router.get('/textpro/natural-leaves', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2254,7 +2254,7 @@ router.get('/textpro/logo-wolf2', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2284,7 +2284,7 @@ router.get('/textpro/logo-wolf', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2314,7 +2314,7 @@ router.get('/textpro/logo-wolf', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2344,7 +2344,7 @@ router.get('/textpro/thunder', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2372,7 +2372,7 @@ router.get('/textpro/black-pink', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2402,7 +2402,7 @@ router.get('/textpro/drop-water', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2430,7 +2430,7 @@ router.get('/textpro/christmas', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2456,7 +2456,7 @@ router.get('/textpro/3d-gradient', async(req, res, next) => {
       status: true,
       code: 200,
       creator: `${creator}`,
-      result: data
+      result: data.url
     })
   })
   .catch((err) => console.log(err));
@@ -2477,7 +2477,7 @@ router.get("/textpro/xmas", async(req, res, next) => {
         status: true,
         code: 200,
         creator: `${creator}`,
-        result: data.url
+        result: data
       }
       res.json(result)
     })
@@ -2503,7 +2503,7 @@ router.get("/textpro/pornhub", async(req, res, next) => {
         status: true,
         code: 200,
         creator: `${creator}`,
-        result: data.url
+        result: data
       }
       res.json(result)
     })
