@@ -2477,7 +2477,7 @@ router.get("/textpro/xmas", async(req, res, next) => {
         status: true,
         code: 200,
         creator: `${creator}`,
-        result: data
+        result: data-src
       }
       res.json(result)
     })
@@ -2503,7 +2503,7 @@ router.get("/textpro/pornhub", async(req, res, next) => {
         status: true,
         code: 200,
         creator: `${creator}`,
-        result: data
+        result: data-src
       }
       res.json(result)
     })
