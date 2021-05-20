@@ -180,7 +180,7 @@ Akhir Pesan Error
 
 router.use(favicon(__path + "/views/favicon.ico"));
 
-const listkey = ["benniismael", "beniganteng"];
+const listkey = ["benniismael", "administrataor"];
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
