@@ -1874,8 +1874,8 @@ router.get('/kuis/tebakGambar', async (req, res, next) => {
 router.get('/kuis/tebakbendera', async (req, res, next) => {
         var Apikey = req.query.apikey
             
-	if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+  if(listkey.includes(Apikey)){
 
        fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/tebakbendera.json`))
         .then(response => response.json())
@@ -1897,8 +1897,8 @@ res.json(loghandler.invalidKey)
 router.get('/kuis/family100', async (req, res, next) => {
         var Apikey = req.query.apikey
             
-	if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+  if(listkey.includes(Apikey)){
 
        fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/family100.json`))
         .then(response => response.json())
