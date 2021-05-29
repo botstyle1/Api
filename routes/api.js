@@ -1244,6 +1244,124 @@ res.json(loghandler.invalidKey)
 }
 })
 
+router.get('/wallpaper/anony', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/anony.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+             	creator: `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/wallpaper/joker', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/joker.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+             	creator: `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+router.get('/wallpaper/cecans', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/cecan.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+             	creator: `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/wallpaper/cogans', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://api.fdci.se/rep.php?gambar=cowokganteng`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+             	creator: `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/wallpaper/harley', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/binjaicity/warga62/master/harley.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+             	creator: `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 
 router.get('/random/quotes/muslim', async (req, res, next) => {
         var Apikey = req.query.apikey
