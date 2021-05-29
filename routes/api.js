@@ -13,6 +13,7 @@ var secure = require('ssl-express-www');
 var cors = require('cors');
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
+var cookie = require("cookie");
 var FormData = require("form-data");
 var request = require('request');
 var zrapi = require("zrapi");
@@ -1867,6 +1868,53 @@ router.get('/kuis/tebakGambar', async (req, res, next) => {
   } else {
   res.json(loghandler.invalidKey)
   }
+})
+
+
+router.get('/kuis/tebakbendera', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!apikey) return res.json(res.sendFile(invalidKey))
+  if(listkey.includes(apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/tebakbendera.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/kuis/family100', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!apikey) return res.json(res.sendFile(invalidKey))
+  if(listkey.includes(apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/family100.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
 })
 
 /**
