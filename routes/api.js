@@ -1532,15 +1532,14 @@ router.get('/artinama', async (req, res, next) => {
             
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
 	if(listkey.includes(Apikey)){
-    if (!nama) return res.json({ status : false, message : "masukan parameter url"})
+        if(!nama) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter nama"})
 
-       fetch(encodeURI(`https://videfikri.com/api/primbon/artinama/?nama=${nama}`))
+       fetch(encodeURI(`https://api.zeks.xyz/api/artinama?apikey=alpin1234567&nama=${nama}`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
+             var result = data.result;
              res.json({
-                author: 'BYYSAYANG',
-                 result
+                 arti: data.result.result,
              })
          })
          .catch(e => {
@@ -1553,19 +1552,18 @@ res.json(loghandler.invalidKey)
 
 router.get('/artimimpi', async (req, res, next) => {
         var Apikey = req.query.apikey,
-            nama = req.query.nama
+            mimpi = req.query.mimpi
             
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
 	if(listkey.includes(Apikey)){
-    if (!mimpi) return res.json({ status : false, message : "masukan parameter mimpi"})
+        if(!mimpi) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter mimpi"})
 
-       fetch(encodeURI(`https://videfikri.com/api/primbon/artimimpi/?mimpi=${mimpi}`))
+       fetch(encodeURI(`https://api.zeks.xyz/api/artimimpi?apikey=alpin1234567&q=${mimpi}`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
+             var result = data;
              res.json({
-               author: 'BYYSAYANG',
-                 result
+                 arti: data.result,
              })
          })
          .catch(e => {
@@ -2022,6 +2020,7 @@ router.get('/kuis/tebakbendera', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
+               results
              })
          })
          .catch(e => {
@@ -2044,6 +2043,7 @@ router.get('/kuis/family100', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
+                results
              })
          })
          .catch(e => {
