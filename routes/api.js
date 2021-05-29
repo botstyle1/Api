@@ -74,7 +74,7 @@ var {
   WPUser
 } = require('./../lib/utils/tools');
 
-var textpro = require('./../lib/utils/textpro');
+var textpro = require("./../lib/utils/textpro");
 
 var tebakGambar = require('./../lib/utils/tebakGambar');
 
