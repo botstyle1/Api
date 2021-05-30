@@ -490,7 +490,7 @@ router.get('/stalk/ig', async(req, res, next) => {
 });
 
 
-router.get('/stalk/npm', async (req, res, next) => {
+router.get('/infonpm', async (req, res, next) => {
         var Apikey = req.query.apikey,
             query = req.query.query
             
@@ -583,7 +583,7 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/short/tinyurl', async (req, res, next) => {
+router.get('/short/tiny', async (req, res, next) => {
     var Apikey = req.query.apikey,
         url = req.query.url
 
@@ -1453,7 +1453,7 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/info/drakorasia', async (req, res, next) => {
+router.get('/drakorasia', async (req, res, next) => {
         var Apikey = req.query.apikey,
             search = req.query.search
             
