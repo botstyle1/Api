@@ -2754,37 +2754,43 @@ router.get("/maker/nulis", async (req, res, next) => {
 })
 
 router.get('/maker/ttp', async (req, res, next) => {
-
-  Apikey = req.query.apikey;
-  if (!req.query.text) return res.json({ status: 404, error: 'masukkan parameter text'})
-  if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)) {
-  random = new Date
-data = await fetch(`https://api.areltiyan.site/sticker_maker?text=${encodeURIComponent(req.query.text)}`).then(v => v.json())
-         base64 = data.base64
-         var buffer = base64.slice(22)
-         await fs.writeFileSync(__path +`/tmp/ttp.png`, buffer, 'base64')
-        res.sendFile(__path+'/tmp/ttp.png')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-});
-
-router.get('/maker/attp', async(req, res, next) => {
-
-  const text = req.query.text;
-  const apikey = req.query.apikey;
-  if(!text) return res.json(loghandler.nottext)
-  if(!apikey) return res.json(res.sendFile(invalidKey))
+	var Apikey = req.query.apikey,
+	    text = req.query.text
+	
+	if(!Apikey) return res.sendFile(invalidKey)
+	if(listkey.includes(Apikey)){
+  if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
-  if(listkey.includes(apikey)) {
-  let hasil = 'https://alpin-api-2021.herokuapp.com/api/attp?text='+ text +'&apikey=alpin1'
-  data = await fetch(hasil).then(v => v.buffer())
-  await fs.writeFileSync(__path +'/tmp/attp.gif', data)
-  res.sendFile(__path +'/tmp/attp.gif')
-  } else {
-    res.json(loghandler.invalidKey)
-  }
+      hasil = (`https://api.xteam.xyz/ttp?file&text=${text}`)
+     data = await fetch(hasil).then(v => v.buffer())
+         await fs.writeFileSync('tolol.png', data)
+        res.sendFile(__path+'/tolol.png')
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/maker/attp', async (req, res, next) => {
+	var Apikey = req.query.apikey,
+	    text = req.query.text
+	
+	if(!Apikey) return res.sendFile(invalidKey)
+	if(listkey.includes(Apikey)){
+  if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
+  
+      hasil = (`https://api.xteam.xyz/attp?file&text=${text}`)
+     data = await fetch(hasil).then(v => v.buffer())
+         await fs.writeFileSync('tolol.png', data)
+        res.sendFile(__path+'/tolol.png')
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
 })
 
 router.get('/maker/harta-tahta', async(req, res, next) => {
