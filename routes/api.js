@@ -1405,8 +1405,8 @@ res.json(loghandler.invalidKey)
 router.get('/slot', async (req, res, next) => {
         var Apikey = req.query.apikey
             
-	if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
 
        fetch(encodeURI('https://api.xteam.xyz/game/virtualslot?APIKEY=benniismaelapikey'))
         .then(response => response.json())
@@ -1429,8 +1429,8 @@ res.json(loghandler.invalidKey)
 router.get('/tebakangka', async (req, res, next) => {
         var Apikey = req.query.apikey
             
-	if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
 
        fetch(encodeURI('https://api.xteam.xyz/game/tebakangka?q=8&APIKEY=benniismaelapikey'))
         .then(response => response.json())
@@ -1456,8 +1456,8 @@ router.get('/suit', async (req, res, next) => {
         var Apikey = req.query.apikey,
             q = req.query.q
             
-	if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
         if(!q) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter chanel query"})
 
        fetch(encodeURI('https://api.xteam.xyz/game/suit?q=batu&APIKEY=benniismaelapikey'))
@@ -1484,8 +1484,8 @@ router.get('/wikipedia', async (req, res, next) => {
         var Apikey = req.query.apikey,
             query = req.query.query
             
-	if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
         if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
 
        fetch(encodeURI(`https://hadi-api.herokuapp.com/api/wiki?query=${query}`))
@@ -1509,8 +1509,8 @@ router.get('/brainly', async (req, res, next) => {
         var Apikey = req.query.apikey,
             query = req.query.query
             
-	if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
         if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
 
        fetch(encodeURI(`https://api.xteam.xyz/brainly?soal=${query}&APIKEY=benniismaelapikey`))
@@ -2471,7 +2471,7 @@ router.get('/textpro/neon', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/neon?text=${text}&APIKEY=benniismaelapikey`)
@@ -2491,7 +2491,7 @@ router.get('/textpro/lava', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/lava?text=${text}&APIKEY=benniismaelapikey`)
@@ -2511,7 +2511,7 @@ router.get('/textpro/helloween', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/helloweenfire?text=${text}&APIKEY=benniismaelapikey`)
@@ -2531,7 +2531,7 @@ router.get('/textpro/blackpink', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/blackpink?text=${text}&APIKEY=benniismaelapikey`)
@@ -2551,7 +2551,7 @@ router.get('/textpro/toxic', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/toxic?text=${text}&APIKEY=benniismaelapikey`)
@@ -2571,7 +2571,7 @@ router.get('/textpro/xmas', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/xmas3d?text=${text}&APIKEY=benniismaelapikey`)
@@ -2592,7 +2592,7 @@ router.get('/textpro/pornhub', async (req, res, next) => {
 	text2 = req.query.text2
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   if(!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
   
@@ -2614,7 +2614,7 @@ router.get('/textpro/cloud', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/cloudtext?text=${text}&APIKEY=benniismaelapikey`)
@@ -2634,7 +2634,7 @@ router.get('/textpro/gradient', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/3dgradient?text=${text}&APIKEY=benniismaelapikey`)
@@ -2655,7 +2655,7 @@ router.get('/textpro/vintage', async (req, res, next) => {
 	text2 = req.query.text2
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   if(!text2) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text2"})
   
@@ -2676,7 +2676,7 @@ router.get('/textpro/pasir2', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/sandsummerbeach?text=${text}&APIKEY=benniismaelapikey`)
@@ -2696,7 +2696,7 @@ router.get('/textpro/pasir3', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/sandwriting?text=${text}&APIKEY=benniismaelapikey`)
@@ -2716,7 +2716,7 @@ router.get('/textpro/pasir', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/summerysandwriting?text=${text}&APIKEY=benniismaelapikey`)
@@ -2736,7 +2736,7 @@ router.get('/textpro/1997', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/1917?text=${text}&APIKEY=benniismaelapikey`)
@@ -2756,7 +2756,7 @@ router.get('/textpro/minion', async (req, res, next) => {
 	    text = req.query.text
 	
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
   if(!text) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter text"})
   
       hasil = (`https://api.xteam.xyz/textpro/minion3d?text=${text}&APIKEY=benniismaelapikey`)
