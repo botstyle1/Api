@@ -1426,32 +1426,6 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/tebakangka', async (req, res, next) => {
-        var Apikey = req.query.apikey
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
-
-       fetch(encodeURI('https://api.xteam.xyz/game/tebakangka?q=8&APIKEY=benniismaelapikey'))
-        .then(response => response.json())
-        .then(data => {
-        var result = data.result;
-             res.json({
-             	res.json({
-                 hasil: data.hasil,
-                 jawabanmu: data.jawabanmu,
-                 jawabanbot: data.jawabanbot,
-                 point: data.poin,
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
-
 router.get('/suit', async (req, res, next) => {
         var Apikey = req.query.apikey,
             q = req.query.q
@@ -1478,59 +1452,6 @@ router.get('/suit', async (req, res, next) => {
 res.json(loghandler.invalidKey)
 }
 })
-
-
-router.get('/wikipedia', async (req, res, next) => {
-        var Apikey = req.query.apikey,
-            query = req.query.query
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
-        if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
-
-       fetch(encodeURI(`https://hadi-api.herokuapp.com/api/wiki?query=${query}`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data.result;
-             res.json({
-                 result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
-
-
-router.get('/brainly', async (req, res, next) => {
-        var Apikey = req.query.apikey,
-            query = req.query.query
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
-        if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
-
-       fetch(encodeURI(`https://api.xteam.xyz/brainly?soal=${query}&APIKEY=benniismaelapikey`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-                 soal: data.soal,
-                 jawaban: data.jawaban,
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
-
-
 
 
 router.get('/drakorasia', async (req, res, next) => {
