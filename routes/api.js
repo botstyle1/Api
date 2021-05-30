@@ -1502,6 +1502,29 @@ res.json(loghandler.invalidKey)
 })
 
 
+router.get('/cerpen', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`http://zekais-api.herokuapp.com/cerpen`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data.result;
+             res.json({
+                 cerita: data.result.ceritanya,
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+
 router.get('/hilih', async (req, res, next) => {
         var Apikey = req.query.apikey,
             kata = req.query.kata
