@@ -1427,31 +1427,7 @@ res.json(loghandler.invalidKey)
 })
 
 
-router.get('/brainly', async (req, res, next) => {
-        var Apikey = req.query.apikey,
-            query = req.query.query
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
-        if(!query) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter query"})
 
-       fetch(encodeURI(`https://api.xteam.xyz/brainly?soal=${query}&APIKEY=${xteam}`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-             	creator: `${creator}`,
-                 soal: data.soal,
-                 jawaban: data.jawaban,
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
 
 router.get('/drakorasia', async (req, res, next) => {
         var Apikey = req.query.apikey,
@@ -1984,12 +1960,15 @@ res.json(loghandler.invalidKey)
 
 router.get('/kuis/caklontong', async (req, res, next) => {
         var Apikey = req.query.apikey
+            
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
 	if(listkey.includes(Apikey)){
-       fetch(encodeURI(`https://docs-api-zahirrr.herokuapp.com/api/quote?type=caklontong`))
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/caklontong.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
              res.json({
                  result
              })
