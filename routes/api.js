@@ -13,8 +13,6 @@ var secure = require('ssl-express-www');
 var cors = require('cors');
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
-var cookie = require("cookie");
-var FormData = require("form-data");
 var request = require('request');
 var zrapi = require("zrapi");
 var dotenv = require("dotenv").config()
@@ -74,8 +72,6 @@ var {
   Base, 
   WPUser
 } = require('./../lib/utils/tools');
-
-var textpro = require("./../lib/utils/textpro");
 
 var tebakGambar = require('./../lib/utils/tebakGambar');
 
