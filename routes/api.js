@@ -1539,7 +1539,7 @@ router.get('/artinama', async (req, res, next) => {
         .then(data => {
              var result = data.result;
              res.json({
-                 arti: data.result.result,
+                 arti: data.result,
              })
          })
          .catch(e => {
