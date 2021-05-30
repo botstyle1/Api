@@ -1453,34 +1453,6 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/tebakangka', async (req, res, next) => {
-        var Apikey = req.query.apikey
-        q = req.query.q
-            
-	if(!Apikey) return res.sendFile(invalidKey)
-	if(listkey.includes(Apikey)){
-	if(!q) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter chanel query"})
-
-       fetch(encodeURI('https://api.xteam.xyz/game/tebakangka?q=8&APIKEY=benniismaelapikey'))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-             	res.json({
-                 hasil: data.hasil,
-                 jawabanmu: data.jawabanmu,
-                 jawabanbot: data.jawabanbot,
-                 point: data.poin,
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
-
 router.get('/wikipedia', async (req, res, next) => {
         var Apikey = req.query.apikey,
             query = req.query.query
