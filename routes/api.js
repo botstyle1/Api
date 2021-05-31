@@ -2147,6 +2147,7 @@ router.get('/kuis/tebakbendera', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
+              result
              })
          })
          .catch(e => {
@@ -2169,6 +2170,7 @@ router.get('/kuis/family100', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
+              result
              })
          })
          .catch(e => {
