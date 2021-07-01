@@ -2056,6 +2056,52 @@ res.json(loghandler.invalidKey)
 }
 })
 
+router.get('/kuis/siapakahaku', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+  if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/siapakahaku.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                results
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/kuis/tebaklirik', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+  if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/tebaklirik.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                results
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
 /**
 * @Maker
 **/
