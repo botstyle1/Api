@@ -2108,10 +2108,10 @@ res.json(loghandler.invalidKey)
 
 
 router.get('/kuis/tebakGambar', async (req, res, next) => {
-  var apikey = req.query.apikey;
-  
-  if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)){
+  var Apikey = req.query.apikey
+            
+  if(!Apikey) return res.json(res.sendFile(invalidKey))
+  if(listkey.includes(Apikey)){
   let result = await tebakGambar()
   if (result) {
     const hasil = {
@@ -2139,7 +2139,7 @@ router.get('/kuis/tebakbendera', async (req, res, next) => {
         var Apikey = req.query.apikey
             
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
 
        fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/tebakbendera.json`))
         .then(response => response.json())
@@ -2162,7 +2162,7 @@ router.get('/kuis/family100', async (req, res, next) => {
         var Apikey = req.query.apikey
             
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
 
        fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/family100.json`))
         .then(response => response.json())
@@ -2170,7 +2170,7 @@ router.get('/kuis/family100', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
-                results
+                 result
              })
          })
          .catch(e => {
@@ -2185,7 +2185,7 @@ router.get('/kuis/siapakahaku', async (req, res, next) => {
         var Apikey = req.query.apikey
             
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
 
        fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/siapakahaku.json`))
         .then(response => response.json())
@@ -2193,7 +2193,7 @@ router.get('/kuis/siapakahaku', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
-                results
+                 result
              })
          })
          .catch(e => {
@@ -2208,7 +2208,7 @@ router.get('/kuis/tebaklirik', async (req, res, next) => {
         var Apikey = req.query.apikey
             
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(Apikey)){
+	if(listkey.includes(Apikey)){
 
        fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/tebaklirik.json`))
         .then(response => response.json())
@@ -2216,7 +2216,7 @@ router.get('/kuis/tebaklirik', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
-                results
+                 result
              })
          })
          .catch(e => {
