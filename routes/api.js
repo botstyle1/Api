@@ -1911,6 +1911,29 @@ res.json(loghandler.invalidKey)
 })
 
 
+router.get('/anime/husbu', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/anime/husbu.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
 router.get('/anime/loli', async(req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(res.sendFile(invalidKey))
@@ -1945,9 +1968,74 @@ router.get('/anime/loli', async(req, res, next) => {
     }
 })
 
+router.get('/anime/waifu', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
 
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/anime/waifu.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 
+router.get('/anime/nekonime', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
 
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/anime/nekonime.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
+
+router.get('/anime/randomanime', async (req, res, next) => {
+        var Apikey = req.query.apikey
+            
+	if(!Apikey) return res.json(res.sendFile(invalidKey))
+	if(listkey.includes(Apikey)){
+
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/anime/randomanime.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+} else {
+res.json(loghandler.invalidKey)
+}
+})
 
 
 router.get('/nsfw/ahegao', async (req, res, next) => {
@@ -2046,7 +2134,7 @@ router.get('/kuis/caklontong', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
 	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/caklontong.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/caklontong.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2098,7 +2186,7 @@ router.get('/kuis/tebakbendera', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/tebakbendera.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/tebakbendera.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2121,7 +2209,7 @@ router.get('/kuis/family100', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/family100.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/family100.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2144,7 +2232,7 @@ router.get('/kuis/siapakahaku', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/siapakahaku.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/siapakahaku.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2167,7 +2255,7 @@ router.get('/kuis/tebaklirik', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/bahan-api/main/tebaklirik.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/tebaklirik.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
