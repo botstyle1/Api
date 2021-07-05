@@ -737,7 +737,7 @@ res.json(loghandler.invalidKey)
 }
 })
 
-router.get('/muslim/kisahnabi', async (req, res, next) => {
+router.get('/kisahnabi', async (req, res, next) => {
 	var nabi = req.query.nabi,
 		Apikey = req.query.apikey;
 
@@ -1099,7 +1099,7 @@ router.get('/muslim/niatashar', async (req, res, next) => {
 res.json(loghandler.invalidKey)
 }
 })
-router.get('/muslim/jadwalshalat', async (req, res, next) => {
+router.get('/jadwalshalat', async (req, res, next) => {
         var Apikey = req.query.apikey,
             kota = req.query.kota
             
