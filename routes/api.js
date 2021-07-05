@@ -3533,7 +3533,10 @@ router.use(function (req, res) {
 
     res.status(404)
     .set("Content-Type", "text/html")
-    .sendFile(__path + '/views/404.__path = process.cwd()
+    .sendFile(__path + '/views/404.html');
+});
+
+module.exports = __path = process.cwd()
 var favicon = require('serve-favicon');
 var express = require('express');
 var db = require(__path + '/database/db');
@@ -7072,7 +7075,4 @@ router.use(function (req, res) {
 });
 
 module.exports = router
-');
-});
 
-module.exports = router
