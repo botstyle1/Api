@@ -1911,29 +1911,6 @@ res.json(loghandler.invalidKey)
 })
 
 
-router.get('/anime/husbu', async (req, res, next) => {
-        var Apikey = req.query.apikey
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
-
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/scrape-anime/main/husbu.json`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-        var result = data[Math.floor(Math.random() * data.length)];
-             res.json({
-                 result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
-
 router.get('/anime/loli', async(req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(res.sendFile(invalidKey))
@@ -1968,74 +1945,9 @@ router.get('/anime/loli', async(req, res, next) => {
     }
 })
 
-router.get('/anime/waifu', async (req, res, next) => {
-        var Apikey = req.query.apikey
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/scrape-anime/main/waifu.json`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-        var result = data[Math.floor(Math.random() * data.length)];
-             res.json({
-                 result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
 
-router.get('/anime/nekonime', async (req, res, next) => {
-        var Apikey = req.query.apikey
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/scrape-anime/main/neko.json`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-        var result = data[Math.floor(Math.random() * data.length)];
-             res.json({
-                 result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
-
-router.get('/anime/randomanime', async (req, res, next) => {
-        var Apikey = req.query.apikey
-            
-	if(!Apikey) return res.json(res.sendFile(invalidKey))
-	if(listkey.includes(Apikey)){
-
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/scrape-anime/main/random.json`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-        var result = data[Math.floor(Math.random() * data.length)];
-             res.json({
-                 result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-} else {
-res.json(loghandler.invalidKey)
-}
-})
 
 
 router.get('/nsfw/ahegao', async (req, res, next) => {
