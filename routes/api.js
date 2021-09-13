@@ -2141,7 +2141,7 @@ router.get('/kuis/tebakbendera', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/benniismael1/Menu-Api/main/tebakbendera.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/benniismael1/Menu-Api/main/tebakbendera2.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
