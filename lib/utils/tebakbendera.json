@@ -1,7 +1,7 @@
 [
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇦🇫",
         "jawaban": "Afganistan",
         "poin": 5
@@ -9,7 +9,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇷",
         "jawaban": "brazil",
         "poin": 5
@@ -17,7 +17,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇿🇦",
         "jawaban": "Afrika Selatan",
         "poin": 5
@@ -25,7 +25,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇿",
         "jawaban": "Belize",
         "poin": 5
@@ -33,7 +33,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇴",
         "jawaban": "Bolivia",
         "poin": 5
@@ -41,7 +41,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇼",
         "jawaban": "Botswana",
         "poin": 5
@@ -49,7 +49,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇹",
         "jawaban": "bhutan",
         "poin": 5
@@ -57,7 +57,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇯",
         "jawaban": "benin",
         "poin": 5
@@ -65,7 +65,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇨🇿",
         "jawaban": "ceko",
         "poin": 5
@@ -73,7 +73,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇷🇺",
         "jawaban": "Rusia",
         "poin": 5
@@ -81,7 +81,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇩",
         "jawaban": "Bangladesh",
         "poin": 5
@@ -89,7 +89,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇲🇾",
         "jawaban": "Malaysia",
         "poin": 5
@@ -97,7 +97,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇺🇲",
         "jawaban": "Amerika",
         "poin": 5
@@ -105,7 +105,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇦🇸",
         "jawaban": "samoa",
         "poin": 5
@@ -113,7 +113,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇮",
         "jawaban": "Burundi",
         "poin": 5
@@ -121,7 +121,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇹🇩",
         "jawaban": "chad",
         "poin": 5
@@ -129,7 +129,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇩🇲",
         "jawaban": "Dominika",
         "poin": 5
@@ -137,7 +137,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇬",
         "jawaban": "Bulgaria",
         "poin": 5
@@ -145,7 +145,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇪🇸",
         "jawaban": "Spanyol",
         "poin": 5
@@ -153,7 +153,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇦🇷",
         "jawaban": "Argentina",
         "poin": 5
@@ -161,7 +161,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇨🇱",
         "jawaban": "Chilli",
         "poin": 5
@@ -169,7 +169,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇫",
         "jawaban": "Burkina Faso",
         "poin": 5
@@ -177,7 +177,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇵🇬",
         "jawaban": "Papua Nugini",
         "poin": 5
@@ -185,7 +185,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇹🇱",
         "jawaban": "Timor Leste",
         "poin": 5
@@ -193,7 +193,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇱🇦",
         "jawaban": "Laos",
         "poin": 5
@@ -201,7 +201,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇹🇭",
         "jawaban": "Thailand",
         "poin": 5
@@ -209,7 +209,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇸🇬",
         "jawaban": "Singapore",
         "poin": 5
@@ -217,7 +217,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇧🇳",
         "jawaban": "Brunai Darussalam",
         "poin": 5
@@ -225,7 +225,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇫🇯",
         "jawaban": "fiji",
         "poin": 5
@@ -233,7 +233,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇬🇦",
         "jawaban": "Gabon",
         "poin": 5
@@ -241,7 +241,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇬🇭",
         "jawaban": "Ghana",
         "poin": 5
@@ -249,7 +249,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇪🇬",
         "jawaban": "mesir",
         "poin": 5
@@ -257,7 +257,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇮🇱",
         "jawaban": "Israel",
         "poin": 5
@@ -265,7 +265,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇵🇸",
         "jawaban": "Palestina",
         "poin": 5
@@ -273,7 +273,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇼🇸",
         "jawaban": "Samoa",
         "poin": 5
@@ -281,7 +281,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇬🇲",
         "jawaban": "Gambia",
         "poin": 5
@@ -289,7 +289,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇵🇱",
         "jawaban": "Polandia",
         "poin": 5
@@ -297,7 +297,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇮🇩",
         "jawaban": "Indonesia",
         "poin": 5
@@ -305,7 +305,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇱🇻",
         "jawaban": "Latvia",
         "poin": 5
@@ -313,7 +313,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇯🇲",
         "jawaban": "Rasta",
         "poin": 5
@@ -321,7 +321,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇫🇷",
         "jawaban": "Perancis",
         "poin": 5
@@ -329,7 +329,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇵🇭",
         "jawaban": "Filipina",
         "poin": 5
@@ -337,7 +337,7 @@
 },
 {
     "result": {
-        "Author": "BYYSAYANG",
+        "creator": "BYYSAYANG",
         "bendera": "🇦🇹",
         "jawaban": "Austria",
         "poin": 5
