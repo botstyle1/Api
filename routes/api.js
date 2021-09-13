@@ -2141,7 +2141,7 @@ router.get('/kuis/tebakbendera', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/tebakbendera.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/tebakbendera.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2164,7 +2164,7 @@ router.get('/kuis/family100', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/family100.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/family100.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2187,7 +2187,7 @@ router.get('/kuis/siapakahaku', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/siapakahaku.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/siapakahaku.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -2210,7 +2210,7 @@ router.get('/kuis/tebaklirik', async (req, res, next) => {
 	if(!Apikey) return res.json(res.sendFile(invalidKey))
   if(listkey.includes(Apikey)){
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/kuis/main/tebaklirik.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/botstyle1/Menu-Api/main/tebaklirik.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
